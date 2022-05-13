@@ -1,5 +1,3 @@
-
-
 import 'package:fluro/fluro.dart';
 import 'package:vertical_landing_page/router/router_handlers.dart';
 

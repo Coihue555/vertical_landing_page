@@ -6,6 +6,6 @@ abstract class PageEvent {
 }
 
 class OnGoToPageCtrl extends PageEvent {
-  final int index;
+  final String index;
   OnGoToPageCtrl(this.index);
 }

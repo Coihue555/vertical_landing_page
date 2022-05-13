@@ -11,29 +11,18 @@ class PageBloc extends Bloc<PageEvent, PageState> {
   }
 
   Future<void> _onGoToPageCtrl(OnGoToPageCtrl event, Emitter emit) async {
-    emit(state.copyWith(
-      isWorking: true,
-      accion: 'OnGoToPageCtrl',
-      error: '',
-      scrollController: PageController(),
-    ));
 
-    final PageController scrollCtrl= PageController(initialPage: event.index);
-
-    scrollCtrl.animateToPage(
-      event.index,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut
-    );
-
-    
+       
     emit(state.copyWith(
       isWorking: false,
       accion: 'OnGoToPageCtrl',
       error: '',
-      scrollController: scrollCtrl,
+      actualPage: event.index,
     ));
   }
+
+          
+
 
 
 

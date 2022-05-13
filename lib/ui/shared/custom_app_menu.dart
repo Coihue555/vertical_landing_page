@@ -51,20 +51,19 @@ class _CustomAppMenuState extends State<CustomAppMenu> with SingleTickerProvider
               if(isOpen)
               ...[
                 CustomMenuItem(delay: 1, text: 'Home', onPressed: (){
-                  print('algo 1');
-                  context.read<PageBloc>().add(OnGoToPageCtrl(0));
+                  context.read<PageBloc>().add(OnGoToPageCtrl('home'));
                 }),
                 CustomMenuItem(delay: 2, text: 'Pricing', onPressed: (){
-                  context.read<PageBloc>().add(OnGoToPageCtrl(1));
+                  context.read<PageBloc>().add(OnGoToPageCtrl('pricing'));
                 }),
                 CustomMenuItem(delay: 3, text: 'Location', onPressed: (){
-                  context.read<PageBloc>().add(OnGoToPageCtrl(2));
+                  context.read<PageBloc>().add(OnGoToPageCtrl('location'));
                 }),
                 CustomMenuItem(delay: 4, text: 'Contact', onPressed: (){
-                  context.read<PageBloc>().add(OnGoToPageCtrl(3));
+                  context.read<PageBloc>().add(OnGoToPageCtrl('contact'));
                 }),
                 CustomMenuItem(delay: 5, text: 'About', onPressed: (){
-                  context.read<PageBloc>().add(OnGoToPageCtrl(4));
+                  context.read<PageBloc>().add(OnGoToPageCtrl('about'));
                 }),
                 const SizedBox(height: 8,)
               ]
